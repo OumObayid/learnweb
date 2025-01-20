@@ -1,0 +1,16 @@
+import { Component } from "@angular/core";
+
+
+@Component({
+  selector: 'app-signal1',
+  imports: [],
+  template: `
+    <div class="container mt-5">
+      <h1> </h1>
+    </div>
+  `,
+  styles: ``,
+})
+export class Signal1Component  {
+  
+}

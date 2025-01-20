@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>&#64;Input et &#64;for</h1>
+  <hr />
+  <div class="border p-3">
+    <h5>Liste des enfants</h5>
+    @for (categorie of categories; track categorie.id) {
+    <div class="border p-2 my-2">
+      <app-inputenfant [propscateg]="categorie"></app-inputenfant>
+    </div>
+    } @empty {
+    <p>Aucun utilisateur trouvé</p>
+    }
+  </div>
+</div>
+<!-- version ancienne -->
+<!-- <div *ngFor="let categorie of categories" class="container">
+  <app-inputenfant [propscateg]="categorie"></app-inputenfant>
+
+ </div> -->
