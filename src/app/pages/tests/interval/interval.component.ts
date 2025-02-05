@@ -20,6 +20,7 @@ import { interval, Subscription } from 'rxjs';
   styles: ``,
 })
 export class IntervalComponent {
+
   time: number = 0; // Valeur actuelle du temps
   private timerSubscription: Subscription | null = null; // Subscription de l'intervalle
   private isRunning: boolean = false; // Indique si la minuterie est active
@@ -28,7 +29,10 @@ export class IntervalComponent {
     if (this.isRunning) return; // Empêche plusieurs démarrages simultanés
 
     const timer$ = interval(500); // Observable qui émet toutes les 100ms
-    this.timerSubscription = timer$
+    this.timerSubscription = timer$.subscribe(() => {
+      this.time++;
+    });
+   
     this.isRunning = true; // Indique que la minuterie est en cours d'exécution
   }
 
@@ -44,4 +48,14 @@ export class IntervalComponent {
     this.stopTimer(); // Arrête la minuterie si elle est active
     this.time = 0; // Réinitialise le temps
   }
+
+//   let count=0;
+// const timer= setInterval(()=>{
+//     console.log(count);
+//     count++;
+// },1000);
+
+// setTimeout(()=>{
+//     clearInterval(timer);
+// },10000)
 }

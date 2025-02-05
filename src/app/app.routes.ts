@@ -1,3 +1,4 @@
+import { ProductsnodeComponent } from './pages/tests/nodejs/productsnode.component';
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { AjaxComponent } from './pages/tests/ajax/ajax.component';
@@ -30,11 +31,23 @@ import { ViewChildren2Component } from './pages/tests/viewChildren/viewChildren2
 import { ContentChild1Component } from './pages/tests/contentChild/contentChild1.component';
 import { IntervalComponent } from './pages/tests/interval/interval.component';
 import { ContentChild2Component } from './pages/tests/contentChild/contentChild2.component';
+import { ContainerTemplateComponent } from './pages/tests/ng-container-template/containerTemplate.component';
+import { ClienthttpComponent } from './pages/tests/http/http.component';
+import { NgrxComponent } from './pages/tests/ngrxTest/ngrx.component';
+import { NgFormComponent } from './pages/tests/ngForm/ngForm1.component';
+import { ViewchildNgFormComponent } from './pages/tests/ngForm/ngForm2.component';
+import { FormcontrolgroupComponent } from './pages/tests/ngForm/form-control-group.component';
+import { LoginComponent } from './pages/tests/login/login.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { authGuard } from './pages/tests/guard/authGuard.guard';
+import { UpdateProductnodeComponent } from './pages/tests/nodejs/update-productnode.component';
+
 
 export const routes: Routes = [
     {path:'', component:HomeComponent},
     {path:'binding', component:BindingComponent},
     {path:'ajax', component:AjaxComponent},
+    {path:'http', component:ClienthttpComponent},
     {path:'input', component:InputComponent},
     {path:'input2', component:Test1Component},
     {path:'output', component:OutputComponent},
@@ -63,4 +76,15 @@ export const routes: Routes = [
     {path:'contentChild1', component:ContentChild1Component},
     {path:'contentChild2', component:ContentChild2Component},
     {path:'interval', component:IntervalComponent},
+    {path:'ng-container-template', component:ContainerTemplateComponent},
+    {path:'ngrx', component:NgrxComponent},
+    {path:'ngForm1', component:NgFormComponent},
+    {path:'ngForm2', component:ViewchildNgFormComponent},
+    {path:'form-control-group', component:FormcontrolgroupComponent},
+    {path:'login', component:LoginComponent},   
+    { path: 'products-node', component: ProductsnodeComponent },
+    { path: 'update-node/:id', component:UpdateProductnodeComponent },
+    //guard
+    { path: 'dashboard', component: DashboardComponent, canActivate: [authGuard] },
+ 
 ];

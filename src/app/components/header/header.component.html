@@ -1,112 +1,154 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse " id="navbarNav">
-      <ul class="navbar-nav d-flex flex-wrap">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/">home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="binding">binding</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="ajax">ajax</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="input">input</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="input2">input2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="output">output</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="signal1">signal1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="class1">class1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="class2">class2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="class3">class3</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="class4">class4</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="class5">class5</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="style1">style1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="style2">style2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="style3">style3</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="style4">style4</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="style5">style5</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="pipes">pipe</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="Custompipes">Custompipe</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="boucles">boucles</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="for">for</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="if">if</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="switch">switch</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="ngContentChild">ngContent</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="viewChild1">viewChild1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="viewChild2">viewChild2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="viewChildren1">viewChildren1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="viewChildren2">viewChildren2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="contentChild1">contentChild1</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="contentChild2">contentChild2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="interval">interval</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+<nav
+  style="background-color: black"
+  class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3 p-2"
+>
+  <a [ngClass]="{ active: router.url === '/' }" routerLink="/">home</a>
+  <a
+    *ngIf="!isloggedIn()"
+    [ngClass]="{ active: router.url === '/login' }"
+    routerLink="/login"
+    >se connecter
+  </a>
+  <span
+    *ngIf="isloggedIn()"
+    class="logout"
+    style="cursor: pointer"
+    (click)="logout()"
+    >se deconnecter
+  </span>
+  <a
+    *ngIf="isloggedIn()"
+    [ngClass]="{ active: router.url === '/dashboard' }"
+    routerLink="/dashboard"
+    >dashboard</a
+  >
+  <a [ngClass]="{ active: router.url === '/guard' }" routerLink="/guard"
+    >guard</a
+  >
+  <a [ngClass]="{ active: router.url === '/resolver' }" routerLink="/resolver"
+    >resolver</a
+  >
+  <a [ngClass]="{ active: router.url === '/binding' }" routerLink="/binding"
+    >binding</a
+  >
+  <a [ngClass]="{ active: router.url === '/interval' }" routerLink="/interval"
+    >interval</a
+  >
+  <a [ngClass]="{ active: router.url === '/ajax' }" routerLink="/ajax">ajax</a>
+  <a [ngClass]="{ active: router.url === '/http' }" routerLink="/http">http</a>
+  <a [ngClass]="{ active: router.url === '/signal1' }" routerLink="/signal1"
+    >signal</a
+  >
+  <a [ngClass]="{ active: router.url === '/input' }" routerLink="/input"
+    >Input</a
+  >
+  <a [ngClass]="{ active: router.url === '/input2' }" routerLink="/input2"
+    >Input2</a
+  >
+  <a [ngClass]="{ active: router.url === '/output' }" routerLink="/output"
+    >Output</a
+  >
+  <a [ngClass]="{ active: router.url === '/class1' }" routerLink="/class1"
+    >Class 1</a
+  >
+  <a [ngClass]="{ active: router.url === '/class2' }" routerLink="/class2"
+    >Class 2</a
+  >
+  <a [ngClass]="{ active: router.url === '/class3' }" routerLink="/class3"
+    >Class 3</a
+  >
+  <a [ngClass]="{ active: router.url === '/class4' }" routerLink="/class4"
+    >Class 4</a
+  >
+  <a [ngClass]="{ active: router.url === '/class5' }" routerLink="/class5"
+    >Class 5</a
+  >
+  <a [ngClass]="{ active: router.url === '/style1' }" routerLink="/style1"
+    >Style 1</a
+  >
+  <a [ngClass]="{ active: router.url === '/style2' }" routerLink="/style2"
+    >Style 2</a
+  >
+  <a [ngClass]="{ active: router.url === '/style3' }" routerLink="/style3"
+    >Style 3</a
+  >
+  <a [ngClass]="{ active: router.url === '/style4' }" routerLink="/style4"
+    >Style 4</a
+  >
+  <a [ngClass]="{ active: router.url === '/style5' }" routerLink="/style5"
+    >Style 5</a
+  >
+  <a [ngClass]="{ active: router.url === '/pipes' }" routerLink="/pipes"
+    >pipes</a
+  >
+  <a
+    [ngClass]="{ active: router.url === '/Custompipes' }"
+    routerLink="/Custompipes"
+    >Custompipes</a
+  >
+  <a [ngClass]="{ active: router.url === '/for' }" routerLink="/for"
+    >&#64;for</a
+  >
+  <a [ngClass]="{ active: router.url === '/if' }" routerLink="/if">&#64;if</a>
+  <a [ngClass]="{ active: router.url === '/switch' }" routerLink="/switch"
+    >&#64;switch</a
+  >
+  <a
+    [ngClass]="{ active: router.url === '/ngContentChild' }"
+    routerLink="/ngContentChild"
+    >ng-content</a
+  >
+  <a
+    [ngClass]="{ active: router.url === '/ng-container-template' }"
+    routerLink="/ng-container-template"
+    >ng-container-template</a
+  >
+  <a
+    [ngClass]="{ active: router.url === '/viewChild1' }"
+    routerLink="/viewChild1"
+    >viewChild 1</a
+  >
+  <a
+    [ngClass]="{ active: router.url === '/viewChild2' }"
+    routerLink="/viewChild2"
+    >viewChild 2</a
+  >
+  <a
+    [ngClass]="{ active: router.url === '/viewChildren1' }"
+    routerLink="/viewChildren1"
+    >viewChildren 1</a
+  >
+
+  <a
+    [ngClass]="{ active: router.url === '/viewChildren2' }"
+    routerLink="/viewChildren2"
+    >viewChildren 2</a
+  >
+  <a
+    [ngClass]="{ active: router.url === '/contentChild1' }"
+    routerLink="/contentChild1"
+    >contentChild 1</a
+  >
+  <a
+    [ngClass]="{ active: router.url === '/contentChild2' }"
+    routerLink="/contentChild2"
+    >contentChild 2</a
+  >
+  <a [ngClass]="{ active: router.url === '/ngrx' }" routerLink="/ngrx">ngrx</a>
+  <a [ngClass]="{ active: router.url === '/ngForm1' }" routerLink="/ngForm1"
+    >ngForm1</a
+  >
+  <a [ngClass]="{ active: router.url === '/ngForm2' }" routerLink="/ngForm2"
+    >ngForm2</a
+  >
+  <a
+    [ngClass]="{ active: router.url === '/form-control-group' }"
+    routerLink="/form-control-group"
+    >form-control-group</a
+  >
+  <a
+    [ngClass]="{ active: router.url === '/products-node' }"
+    routerLink="/products-node"
+    >crud-nodejs-mongodb</a
+  >
 </nav>
