@@ -1,59 +1,125 @@
-# Shopping
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![JSON](https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+![Angular](https://img.shields.io/badge/-A%20N%20G%20U%20L%20A%20R-DD0031?style=for-the-badge&logo=angular&logoColor=white)
 
-## Development server
+# 🚀 LearnWeb
 
-To start a local development server, run:
+**LearnWeb** est une plateforme de démonstration de compétences en développement web.  
+Le site centralise des projets et cours utilisant des technologies modernes pour apprendre et explorer les bonnes pratiques du développement web.
 
+---
+
+## 📝 Table des matières
+
+- [À propos](#-à-propos)
+- [Technologies utilisées](#-technologies-utilisées)
+- [Fonctionnalités](#-fonctionnalités)
+- [Installation & Lancement](#-installation--lancement)
+- [Structure du projet](#-structure-du-projet)
+- [Déploiement](#-déploiement)
+- [Auteurs](#-auteurs)
+
+---
+
+## 📖 À propos
+
+LearnWeb est un projet éducatif et de démonstration.  
+Il contient des exemples concrets de développement frontend et backend avec plusieurs stacks technologiques.  
+L’objectif est de fournir un site clair, structuré et moderne pour montrer les compétences en développement web.
+
+---
+
+## 🛠️ Technologies utilisées
+
+- **Angular** ⚡ : Frontend dynamique et composants réutilisables  
+- **Firebase** 🔥 : Authentification, base de données temps réel et stockage  
+- **Node.js** 🌐 : Backend léger et gestion d’API  
+- **PHP** 🐘 : Scripts serveur et gestion classique côté serveur  
+- **JSON** 📄 : Manipulation et échange de données  
+- **CSS3** 🎨 : Styles modernes et animations  
+- **Bootstrap** 💠 : Layout responsive et composants UI
+---
+
+## ✨ Fonctionnalités
+
+- Pages organisées par technologie et cours  
+- Exemple de consommation d’API JSON  
+- Formulaires et authentification Firebase  
+- Layout responsive avec sidebar et navbar 3D  
+- Déploiement sur serveur Apache ou Node.js  
+- Présentation de projets frontend et backend
+---
+
+## ⚡ Installation & Lancement
+
+### Prérequis
+
+- Node.js (>= 16)  
+- Angular CLI (>= 15)  
+- PHP (si utilisation des scripts côté serveur)  
+
+### Étapes
+
+#### 1. Cloner le projet :  
 ```bash
+git clone https://github.com/OumObayid/learnweb
+```
+
+#### 2. Installer les dépendances :
+```bash
+cd learnweb
+npm install
+```
+
+#### 3. Lancer le serveur de développement Angular :
+```
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+#### 4. Accéder au projet :
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
+## 📁 Structure du projet :
+```
+learnweb/
+│
+├─ src/
+│  ├─ app/           # Composants Angular
+│  ├─ assets/        # Images, fichiers statiques
+│  ├─ environments/  # Configurations dev/prod
+│
+├─ dist/             # Build production
+├─ package.json
+└─ README.md
 ```
 
-## Building
+## 🚀 Déploiement
 
-To build the project run:
-
-```bash
-ng build
+- Frontend Angular uniquement : copier dist/learnWeb sur un serveur Apache/Nginx
+- Avec Node.js : lancer un serveur Express et pointer vers le dossier dist/learnWeb/browser
+- Exemple .htaccess pour routing Angular :
+  
+```
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 👨‍💻 Auteurs
 
-## Running unit tests
+Oumaima El Obayid - Développement frontend et backend
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Projet LearnWeb pour démonstration des compétences full-stack
