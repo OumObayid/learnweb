@@ -14,16 +14,19 @@ Le site centralise des projets et cours utilisant des technologies modernes pour
 
 ---
 
-📸 Aperçu
+# 📸 Aperçu
 
 <img width="320" height="180" alt="learnweb" src="https://github.com/user-attachments/assets/c2c8bc5d-e406-4af0-9243-62df52d3614f" />
 
 ---
 
 # 🚀 Démo
+
 👉 [Lien vers le site](https://learnweb.oumportfolio.com/)
 
-## 📝 Table des matières
+---
+
+# 📝 Table des matières
 
 - [À propos](#-à-propos)
 - [Technologies utilisées](#-technologies-utilisées)
@@ -35,7 +38,7 @@ Le site centralise des projets et cours utilisant des technologies modernes pour
 
 ---
 
-## 📖 À propos
+# 📖 À propos
 
 LearnWeb est un projet éducatif et de démonstration.  
 Il contient des exemples concrets de développement frontend et backend avec plusieurs stacks technologiques.  
@@ -43,7 +46,7 @@ L’objectif est de fournir un site clair, structuré et moderne pour montrer le
 
 ---
 
-## 🛠️ Technologies utilisées
+# 🛠️ Technologies utilisées
 
 - **Angular** ⚡ : Frontend dynamique et composants réutilisables  
 - **Firebase** 🔥 : Authentification, base de données temps réel et stockage  
@@ -52,9 +55,10 @@ L’objectif est de fournir un site clair, structuré et moderne pour montrer le
 - **JSON** 📄 : Manipulation et échange de données  
 - **CSS3** 🎨 : Styles modernes et animations  
 - **Bootstrap** 💠 : Layout responsive et composants UI
+  
 ---
 
-## ✨ Fonctionnalités
+# ✨ Fonctionnalités
 
 - Pages organisées par technologie et cours  
 - Exemple de consommation d’API JSON  
@@ -62,51 +66,42 @@ L’objectif est de fournir un site clair, structuré et moderne pour montrer le
 - Layout responsive avec sidebar et navbar 3D  
 - Déploiement sur serveur Apache ou Node.js  
 - Présentation de projets frontend et backend
+  
 ---
 
 ## ⚡ Installation & Lancement
 
-### Prérequis
+## Prérequis
 
 - Node.js (>= 16)  
 - Angular CLI (>= 15)  
 - PHP (si utilisation des scripts côté serveur)  
 
-### Étapes
+## Étapes
 
 #### 1. Cloner le projet :  
-```bash
+
+```
 git clone https://github.com/OumObayid/learnweb
 ```
 
 #### 2. Installer les dépendances :
-```bash
+
+```
 cd learnweb
 npm install
 ```
 
 #### 3. Lancer le serveur de développement Angular :
+
 ```
 ng serve
 ```
 
 #### 4. Accéder au projet :
+
 ```
 http://localhost:4200
-```
-
-## 📁 Structure du projet :
-```
-learnweb/
-│
-├─ src/
-│  ├─ app/           # Composants Angular
-│  ├─ assets/        # Images, fichiers statiques
-│  ├─ environments/  # Configurations dev/prod
-│
-├─ dist/             # Build production
-├─ package.json
-└─ README.md
 ```
 
 ## 🚀 Déploiement
