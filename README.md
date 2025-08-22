@@ -121,8 +121,8 @@ http://localhost:4200
 </IfModule>
 ```
 
-## 👨‍💻 Auteurs
+## 👨‍💻 Auteur :
+    - **Oumaima El Obayid** 
+    - Email : elobayidoumaima@gmail.com --- 
 
-Oumaima El Obayid - Développement frontend et backend
-
-Projet LearnWeb pour démonstration des compétences full-stack
+---
