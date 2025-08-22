@@ -71,13 +71,13 @@ L’objectif est de fournir un site clair, structuré et moderne pour montrer le
 
 ## ⚡ Installation & Lancement
 
-## Prérequis
+### Prérequis
 
 - Node.js (>= 16)  
 - Angular CLI (>= 15)  
 - PHP (si utilisation des scripts côté serveur)  
 
-## Étapes
+### Étapes
 
 #### 1. Cloner le projet :  
 
