@@ -14,6 +14,12 @@ Le site centralise des projets et cours utilisant des technologies modernes pour
 
 ---
 
+📸 Aperçu
+
+<img width="320" height="180" alt="learnweb" src="https://github.com/user-attachments/assets/c2c8bc5d-e406-4af0-9243-62df52d3614f" />
+
+---
+
 # 🚀 Démo
 👉 [Lien vers le site](https://learnweb.oumportfolio.com/)
 
